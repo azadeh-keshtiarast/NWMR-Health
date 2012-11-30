@@ -227,8 +227,6 @@ L1:
 
         Fun_output_Health()
 
-
-    
         '--Final--------------------------------------------------------------------------
 Final:
 
@@ -261,7 +259,6 @@ err_h:
         If chkDiabets.Checked = True Then
             NumCriteria = NumCriteria + 1
         End If
-       
 
         ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         '------Analysis-------------------------------------------------------------
@@ -461,8 +458,7 @@ err_h:
         Fun_DeleteLayerfromMap("Selected_SEIFA")
         Fun_DeleteLayerfromMap("Selected_Depression")
         Fun_DeleteLayerfromMap("Selected_Diabetes")
-        'TurnOFFONLayer(OutputFileName)
-        'TurnOFFONLayer(OutputFileName)
+       
         '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         Exit Sub
         '----------------------------------------------------------------------------
@@ -574,45 +570,4 @@ err_h:
             pb_ExistAdd.Visible = False
         End If
     End Sub
-
-    'Private Function Fun_CreateAfterHourQuery() As String
-    '    Dim QueryAfterHour As String = ""
-
-    '    If chkAfterHSW5_8.Checked = True Then
-    '        QueryAfterHour = "([Monday] LIKE '*-5:30PM*' OR [Tuesday] LIKE '*-5:30PM*' OR [Wednesday] LIKE '*-5:30PM*' OR [Thursday] LIKE '*-5:30PM*' OR [Friday] LIKE '*-5:30PM*' OR" +
-    '                         " [Monday] LIKE '*-6:00PM*' OR [Tuesday] LIKE '*-6:00PM*' OR [Wednesday] LIKE '*-6:00PM*' OR [Thursday] LIKE '*-6:00PM*' OR [Friday] LIKE '*-6:00PM*' OR" +
-    '                         " [Monday] LIKE '*-6:30PM*' OR [Tuesday] LIKE '*-6:30PM*' OR [Wednesday] LIKE '*-6:30PM*' OR [Thursday] LIKE '*-6:30PM*' OR [Friday] LIKE '*-6:30PM*' OR" +
-    '                         " [Monday] LIKE '*-7:00PM*' OR [Tuesday] LIKE '*-7:00PM*' OR [Wednesday] LIKE '*-7:00PM*' OR [Thursday] LIKE '*-7:00PM*' OR [Friday] LIKE '*-7:00PM*' OR" +
-    '                         " [Monday] LIKE '*-7:30PM*' OR [Tuesday] LIKE '*-7:30PM*' OR [Wednesday] LIKE '*-7:30PM*' OR [Thursday] LIKE '*-7:30PM*' OR [Friday] LIKE '*-7:30PM*' OR" +
-    '                         " [Monday] LIKE '*-8:00PM*' OR [Tuesday] LIKE '*-8:00PM*' OR [Wednesday] LIKE '*-8:00PM*' OR [Thursday] LIKE '*-8:00PM*' OR [Friday] LIKE '*-8:00PM*' )"
-    '    End If
-    '    If chkAfterHSW8.Checked = True Then
-    '        QueryAfterHour = "([Monday] LIKE '*-8:30PM*' OR [Tuesday] LIKE '*-8:30PM*' OR [Wednesday] LIKE '*-8:30PM*' OR [Thursday] LIKE '*-8:30PM*' OR [Friday] LIKE '*-8:30PM*' OR" +
-    '                        " [Monday] LIKE '*-9:00PM*' OR [Tuesday] LIKE '*-9:00PM*' OR [Wednesday] LIKE '*-9:00PM*' OR [Thursday] LIKE '*-9:00PM*' OR [Friday] LIKE '*-9:00PM*' OR" +
-    '                        " [Monday] LIKE '*-9:30PM*' OR [Tuesday] LIKE '*-9:30PM*' OR [Wednesday] LIKE '*-9:30PM*' OR [Thursday] LIKE '*-9:30PM*' OR [Friday] LIKE '*-9:30PM*' OR" +
-    '                        " [Monday] LIKE '*-10:00PM*' OR [Tuesday] LIKE '*-10:00PM*' OR [Wednesday] LIKE '*-10:00PM*' OR [Thursday] LIKE '*-10:00PM*' OR [Friday] LIKE '*-10:00PM*' OR" +
-    '                        " [Monday] LIKE '*-10:30PM*' OR [Tuesday] LIKE '*-10:30PM*' OR [Wednesday] LIKE '*-10:30PM*' OR [Thursday] LIKE '*-10:30PM*' OR [Friday] LIKE '*-10:30PM*' OR" +
-    '                        " [Monday] LIKE '*-11:00PM*' OR [Tuesday] LIKE '*-11:00PM*' OR [Wednesday] LIKE '*-11:00PM*' OR [Thursday] LIKE '*-11:00PM*' OR [Friday] LIKE '*-11:00PM*' OR" +
-    '                        " [Monday] LIKE '*-11:30PM*' OR [Tuesday] LIKE '*-11:30PM*' OR [Wednesday] LIKE '*-11:30PM*' OR [Thursday] LIKE '*-11:30PM*' OR [Friday] LIKE '*-11:30PM*' )"
-    '    End If
-    '    If chkAfterHSSat.Checked = True Then
-    '        If QueryAfterHour <> "" Then
-    '            QueryAfterHour = QueryAfterHour + "and ([Saturday] LIKE '*PM*')"
-    '        Else
-    '            QueryAfterHour = "([Saturday] LIKE '*PM*')"
-    '        End If
-    '    End If
-
-    '    If chkAfterHSSun.Checked = True Then
-    '        If QueryAfterHour <> "" Then
-    '            QueryAfterHour = QueryAfterHour + "and ([Sunday]  LIKE '*PM*')"
-    '        Else
-    '            QueryAfterHour = "([Sunday] LIKE '*AM*' or [Sunday] LIKE '*PM*')"
-    '        End If
-    '    End If
-    '    If QueryAfterHour <> "" Then
-    '        QueryAfterHour = "(" + QueryAfterHour + ")"
-    '    End If
-    '    Return QueryAfterHour
-    'End Function
 End Class

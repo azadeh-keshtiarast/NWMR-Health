@@ -106,9 +106,6 @@ err_h:
         Do While (Not player Is Nothing)
 
             pFeatureLayer = player
-
-
-
             pFeatureSelection = pFeatureLayer
             If Not pFeatureLayer Is Nothing Then
                 If pFeatureLayer.FeatureClass.AliasName = LayerName Then

@@ -41,8 +41,6 @@ Public Class Health
             Return
         End If
         If m_hookHelper.FocusMap.LayerCount > 0 Then
-            'Dim bufferDlg As BufferDlg = New BufferDlg(m_hookHelper)
-            'bufferDlg.Show()
             If ffrmMain Is Nothing Then
                 ffrmMain = New frmMain(m_hookHelper)
                 ffrmMain.Show()

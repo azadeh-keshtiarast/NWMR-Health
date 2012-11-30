@@ -2,31 +2,17 @@
 Imports System.Configuration
 Imports System.Reflection
 Imports Microsoft.VisualBasic
-
 Imports System.Drawing
 Imports System.Text
 Imports System.Windows.Forms
-Imports System.Runtime.InteropServices
-Imports ESRI.ArcGIS.Controls
-Imports ESRI.ArcGIS.Carto
-Imports ESRI.ArcGIS.esriSystem
-Imports ESRI.ArcGIS.Geoprocessor
-Imports ESRI.ArcGIS.Geoprocessing
-Imports ESRI.ArcGIS.AnalysisTools
 Imports System.IO
 Imports System.Collections.Specialized
 Imports System.Windows.Forms.Cursors
+Imports System.Runtime.InteropServices
+Imports ESRI.ArcGIS.Controls
+Imports ESRI.ArcGIS.Carto
 Imports ESRI.ArcGIS.ArcMapUI
 Imports ESRI.ArcGIS.Framework
-'Imports ESRI.ArcGIS.Geometry
-'Imports ESRI.ArcGIS.SystemUI
-'Imports ESRI.ArcGIS.Geometry.esriGeometryDimension
-'Imports ESRI.ArcGIS.Geodatabase
-'Imports ESRI.ArcGIS.Editor
-'Imports ESRI.ArcGIS.Editor.esriEditState
-'Imports ESRI.ArcGIS.Geodatabase.esriSpatialRelEnum
-Imports ESRI.ArcGIS.Display
-'Imports ESRI.ArcGIS.DisplayUI
 
 Module mdjConstant
 
@@ -47,18 +33,14 @@ Module mdjConstant
     Public ffrmMain As frmMain
     Public ErrorExist As Boolean
     Public ErrorDescription As String
-
     Public dsMain As DataSet
     Public daMain As OleDb.OleDbDataAdapter
     Public Con As OleDb.OleDbConnection
-
     Public pApp As IApplication
     Public pMxDoc As IMxDocument
     Public pMap As IMap
     Public pActiveView As IActiveView
-
     Public FeatureLayerName As String
-
     Public IntersectPolyStr As String
 
     Public Sub Fun_SetConstraint()
@@ -69,12 +51,9 @@ Module mdjConstant
         map.ExeConfigFilename = ffrmMain.[GetType]().Assembly.Location & ".config"
         Dim config As Configuration = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None)
 
-        '''''''''''''''''''''
-
-        ' MsgBox(config.AppSettings.Settings("TempPath").Value)
+        ''''''''''''''''''
         TempPath = "C:\tmp"
         TempGDBName = "Output.mdb"
-        'PathGDB = "C:\Health\Data\Health.mdb"
 
         fcSEIFA = "CCD2006_ML_INWM"
         fcDepression = "MoodProblems_ML_NWIM"
